@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>닥터배 스킨부스터 6종 디스플레이 가판 세팅</title>
+<!-- 카톡/SNS 미리보기용 (크롤러는 JS를 읽지 않으므로 여기 직접 수정) -->
+<meta name="description" content="닥터배 스킨부스터 6종을 진열할 마그넷 보드와 자석 후크 구매 안내. 쿠팡에서 바로 주문하실 수 있습니다.">
+<meta property="og:title" content="닥터배 스킨부스터 6종 디스플레이 가판 세팅">
+<meta property="og:description" content="마그넷 보드 1개 + 자석 롱후크 3봉지(15개)로 6종을 두 줄로 진열하세요. 쿠팡 주문 링크 안내.">
+<meta property="og:type" content="website">
+<style>
+  :root{
+    --ink:#1f2328; --sub:#5b6470; --line:#e6e9ee; --bg:#f7f8fa; --card:#fff;
+    --gold:#b8892e; --gold-bg:#fbf5e8; --leaf:#2f7a52; --leaf-bg:#eaf5ee;
+    --coupang:#e5322d; --coupang-dk:#c9241f; --warn:#b45309; --warn-bg:#fff7ed;
+    --r:16px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;word-break:keep-all}
+  a{color:inherit}
+  .wrap{max-width:640px;margin:0 auto;padding:0 16px 120px}
+
+  /* 상단 바 */
+  .topbar{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+  .topbar .in{max-width:640px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+  .brand{font-weight:800;letter-spacing:.02em}
+  .brand small{display:block;font-weight:500;font-size:11px;color:var(--sub);letter-spacing:.08em}
+  .pill{font-size:12px;font-weight:700;color:var(--gold);background:var(--gold-bg);border:1px solid #efdfb8;padding:4px 10px;border-radius:999px}
+
+  /* 히어로 */
+  .hero{padding:32px 0 20px}
+  .hero h1{font-size:26px;line-height:1.3;margin:0 0 10px;letter-spacing:-.01em}
+  .hero p{margin:0;color:var(--sub);font-size:15px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px;color:var(--ink)}
+  .chip b{color:var(--leaf)}
+
+  /* 구성 요약 */
+  .summary{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 18px 8px;margin:10px 0 26px}
+  .summary h2{font-size:15px;margin:0 0 10px;color:var(--sub);font-weight:700;letter-spacing:.04em}
+  .summary table{width:100%;border-collapse:collapse;font-size:15px}
+  .summary td{padding:9px 0;border-top:1px solid var(--line);vertical-align:top}
+  .summary tr:first-child td{border-top:0}
+  .summary td.q{text-align:right;white-space:nowrap;font-weight:700}
+  .summary td.q span{display:block;font-size:12px;color:var(--sub);font-weight:500}
+  .summary .td-sub{display:block;font-size:12px;color:var(--sub)}
+
+  /* 다이어그램 */
+  .diagram{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin:0 0 26px}
+  .diagram img{display:block;width:100%;height:auto;border-radius:10px}
+  .diagram figcaption{font-size:13px;color:var(--sub);margin-top:8px;text-align:center}
+
+  /* 상품 카드 */
+  .step-label{display:flex;align-items:center;gap:10px;margin:28px 0 12px}
+  .step-label .bar{width:4px;height:18px;border-radius:2px;background:var(--gold)}
+  .step-label h2{font-size:17px;margin:0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+  .card .no{display:inline-block;font-size:12px;font-weight:800;color:#fff;background:var(--gold);border-radius:6px;padding:2px 8px;margin-bottom:8px;letter-spacing:.06em}
+  .card h3{font-size:17px;margin:0 0 4px;line-height:1.4}
+  .card h3 span{font-weight:500;color:var(--sub)}
+  .card ul.spec{font-size:14px;color:var(--sub);margin:0 0 12px;padding-left:18px}
+  .card ul.spec li{margin:2px 0}
+  .price{display:flex;align-items:baseline;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+  .price b{font-size:20px}
+  .price s{color:#9aa3ad;font-size:14px}
+  .price em{font-style:normal;font-size:12px;color:var(--sub)}
+  .btn{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:4px 8px;text-align:center;width:100%;padding:14px 16px;border-radius:12px;font-weight:800;font-size:16px;text-decoration:none;color:#fff;background:var(--coupang);transition:background .15s}
+  .btn:hover{background:var(--coupang-dk)}
+  .btn.alt{background:#fff;color:var(--coupang);border:2px solid var(--coupang);margin-top:8px}
+  .btn.alt:hover{background:#fff5f5}
+  .btn small{font-weight:600;font-size:13px;opacity:.9;white-space:nowrap}
+  .note{font-size:13px;color:var(--sub);margin:10px 0 0}
+  .soldout{display:inline-block;font-size:12px;font-weight:700;color:var(--warn);background:var(--warn-bg);border:1px solid #fed7aa;border-radius:6px;padding:0 8px;margin-left:4px;vertical-align:middle}
+
+  /* 세팅 팁 */
+  .tips{background:var(--leaf-bg);border:1px solid #cfe6d8;border-radius:var(--r);padding:18px;margin-top:26px}
+  .tips h2{font-size:16px;margin:0 0 10px;color:var(--leaf)}
+  .tips h2 .ref{font-size:13px;font-weight:500;color:var(--sub)}
+  .tips ol{margin:0;padding-left:20px;font-size:15px}
+  .tips li{margin:6px 0}
+
+  /* 푸터 */
+  footer{margin-top:36px;font-size:12px;color:#8a939e;text-align:center;line-height:1.7}
+
+  /* 하단 고정 CTA */
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));z-index:10}
+  .sticky .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .sticky .btn{padding:12px 10px;font-size:14px}
+  @media (max-width:360px){.sticky .in{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="in">
+  <div class="brand">Dr.Bae<small>DISPLAY SETTING GUIDE</small></div>
+  <span class="pill">원장님 안내용</span>
+</div></div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <h1>닥터배 스킨부스터 6종<br>디스플레이 가판 세팅</h1>
+    <p>관리실 벽면이나 카운터 옆에 6종을 한눈에 보이도록 진열하는 구성입니다. 아래 쿠팡 링크에서 두 가지만 주문하시면 됩니다.</p>
+    <div class="chips">
+      <span class="chip"><b>2품목</b> 주문</span>
+      <span class="chip">공구 없이 <b>붙이기만</b></span>
+      <span class="chip">쿠팡 <b>익일 배송</b></span>
+    </div>
+  </section>
+
+  <section class="summary">
+    <h2>주문 구성</h2>
+    <table>
+      <tr><td>① 메탈 스테인레스 마그넷 게시판 보드<span class="td-sub">사이즈 40 × 60cm</span></td><td class="q">40 × 60cm · 1개 선택 후 주문</td></tr>
+      <tr><td>② 루메테라 롱 후크 강력 자석 고리 7cm<span class="td-sub">20mm 또는 16mm 중 1종 · 1봉지 5개</span></td><td class="q">3봉지(15개) 선택 후 주문</td></tr>
+    </table>
+  </section>
+
+  <figure class="diagram">
+    <img src="assets/display-photo.jpg" alt="메탈 보드에 자석 후크를 붙이고 닥터배 스킨부스터 6종 파우치를 두 줄로 걸어 둔 실제 진열 모습" loading="lazy">
+    <figcaption>실제 세팅 예시 — 윗단은 1개 바이알 포장, 아랫단은 2개 바이알 포장으로 6종을 두 줄 진열했습니다.</figcaption>
+  </figure>
+
+  <div class="step-label"><span class="bar"></span><h2>주문 링크</h2></div>
+
+  <article class="card">
+    <span class="no">① 보드</span>
+    <h3>메탈 스테인레스 마그넷 게시판 보드</h3>
+    <ul class="spec">
+      <li>우드 프레임 · 벽걸이형 · 후크와 제품이 자석으로 붙는 철제 보드</li>
+      <li>주문 시 옵션에서 <b>사이즈 40 × 60cm</b>, 수량 <b>1개</b> 선택 후 주문</li>
+    </ul>
+    <div class="price"><b>43,920원</b><s>54,900원</s><em>· 무료배송 · 확인일 기준</em></div>
+    <a class="btn" id="btn-board" href="#" target="_blank" rel="noopener">보드 주문하기 <small>40×60cm · 1개</small></a>
+  </article>
+
+  <article class="card">
+    <span class="no">② 후크</span>
+    <h3>루메테라 롱 후크 강력 자석 고리 7cm <span>20mm 또는 16mm · 1봉지 5개</span></h3>
+    <ul class="spec">
+      <li>자석 지름 <b>20mm</b>와 <b>16mm</b> 두 가지가 있으며 <b>둘 중 아무거나 1종</b>만 주문하시면 됩니다</li>
+      <li>한쪽이 일시품절이면 다른 쪽으로 주문해 주세요</li>
+      <li>주문 시 옵션에서 <b>3봉지(15개)</b> 선택 후 주문 — 두 줄 12개 사용 + 여분 3개</li>
+    </ul>
+    <div class="price"><b>10,100원</b><em>/ 1봉지(5개) · 3봉지 30,300원 · 확인일 기준</em></div>
+    <a class="btn" id="btn-hook" href="#" target="_blank" rel="noopener">20mm 후크 주문하기 <small>3봉지</small></a>
+    <a class="btn alt" id="btn-hook16" href="#" target="_blank" rel="noopener">16mm 후크 주문하기 <small>3봉지</small></a>
+    <p class="note">두 제품은 자석 지름만 다르고 후크 길이(7cm)와 구성(5개입)은 같습니다. 어느 쪽이든 진열에 문제없습니다.</p>
+  </article>
+
+  <section class="tips">
+    <h2>세팅 요령 <span class="ref">(참고용)</span></h2>
+    <ol>
+      <li>보드를 벽에 걸거나 카운터 뒤에 세워 둡니다. (우드 프레임이라 세워 두어도 안정적입니다)</li>
+      <li>자석 후크를 위·아래 두 줄로 6개씩 붙입니다. 파우치 높이만큼 줄 간격을 띄워 주세요.</li>
+      <li><b>윗단에는 1개 바이알 포장</b>, <b>아랫단에는 2개 바이알 포장</b>을 같은 순서로 겁니다. 남은 후크는 여분으로 보관합니다.</li>
+      <li>고객 상담 안내 페이지 QR을 보드 한쪽에 함께 붙이면 상담이 편해집니다.</li>
+    </ol>
+  </section>
+
+  <footer>
+    가격과 재고는 쿠팡 페이지 기준으로 수시로 바뀝니다. 주문 전 다시 확인해 주세요.<br>
+    Dr.Bae · BaeLab
+  </footer>
+
+</div>
+
+<div class="sticky"><div class="in">
+  <a class="btn" id="btn-board-s" href="#" target="_blank" rel="noopener">① 보드 주문</a>
+  <a class="btn" id="btn-hook-s" href="#" target="_blank" rel="noopener">② 후크 주문</a>
+</div></div>
+
+<script>
+  // ===== 설정: 링크 변경은 여기서만 수정 =====
+  const CONFIG = {
+    boardUrl : "https://www.coupang.com/vp/products/9685941797?vendorItemId=95896016584",
+    hookUrl  : "https://www.coupang.com/vp/products/9151430966?itemId=26947105160&vendorItemId=93916221654", // 20mm · 재고 있음
+    hook16Url: "https://www.coupang.com/vp/products/9151447518?vendorItemId=93916289379"                    // 16mm · 일시품절
+  };
+  const set = (id, url) => { const a = document.getElementById(id); if (a && url) a.href = url; };
+  set("btn-board",   CONFIG.boardUrl);
+  set("btn-board-s", CONFIG.boardUrl);
+  set("btn-hook",    CONFIG.hookUrl);
+  set("btn-hook-s",  CONFIG.hookUrl);
+  set("btn-hook16",  CONFIG.hook16Url);
+</script>
+</body>
+</html>
